@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
    # Configure Spark
    conf = SparkConf().setAppName(APP_NAME)
-   conf = conf.setMaster("local[*]")
+   # conf = conf.setMaster("local[*]")
    sc   = SparkContext(conf=conf)
    filename = sys.argv[1]
    main(sc, filename)

@@ -92,7 +92,7 @@ if __name__ == '__main__':
 	# conf = conf.setMaster("spark://Abdulazizs-MacBook-Pro.local:7077")
 
 	conf = SparkConf().setAppName(APP_NAME)
-   	conf = conf.setMaster("local[*]")
+   	# conf = conf.setMaster("local[*]")
 	sc = SparkContext(conf=conf)
 
 	if len(sys.argv) == 3:
