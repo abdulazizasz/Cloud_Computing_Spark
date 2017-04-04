@@ -30,9 +30,9 @@ def parse_log_files(log_file):
 
 def generate_rdds(filename):
 
-    logs = sc.textFile(filename).map(parse_log_files).cache()
+    logs = sc.textFile(filename).map(parse_log_files)
 
-    access_logs =  logs.filter(lambda s: s[1] == 1).map(lambda s: s[0]).cache()
+    access_logs =  logs.filter(lambda s: s[1] == 1).map(lambda s: s[0])
 
     failed_logs = logs.filter(lambda s: s[1] == 0).map(lambda s: s[0])
     
